@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- (prototype : getBean 할 때 마다 새롭게 객체를 만들게 된다.) -->
+<bean id="stu1" class="com.dto.Student" scope="prototype"></bean>
+<!-- (singletone : getBean 할 때 마다 하나를 가지고 같이 쓰게 된다.) -->
+<bean id="stu2" class="com.dto.Student" scope="singleton"></bean> 
+<bean id="scopeTest" class="com.dto.Student"></bean>
+
+</beans>

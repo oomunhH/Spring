@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+<bean id="cat1" class="com.dto.Cat" p:catAge="11" p:catName="나비"></bean>
+<bean id="cat2" class="com.dto.Cat" p:catAge="5" p:catName="하늘"></bean>
+	<util:list id="cats">
+			<ref bean="cat2"/>
+			<ref bean="cat1"/>
+			<ref bean="cat1"/>
+			<ref bean="cat2"/>
+			<ref bean="cat1"/>
+			<ref bean="cat2"/>
+	</util:list>
+		
+<bean id="stu1" class="com.dto.Student">
+	<property name="name" value="홍길동"></property>
+	<property name="age" value="33"></property>
+	<property name="listcat">
+	<ref bean="cats"/>
+	</property>
+</bean>
+</beans>
